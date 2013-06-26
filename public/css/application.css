@@ -1,0 +1,13 @@
+.container {
+  margin: 20px auto;
+  width: 600px;
+  padding: 0px 20px 20px 20px;
+  border: 40px dotted black;
+}
+th {
+  text-align: left;
+}
+
+#red_error {
+  color: red;
+}

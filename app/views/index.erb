@@ -1,0 +1,21 @@
+<form method="post" action="/urls">
+<input type="text" name="long" placeholder="get a short url" >
+<input type="submit" value="shorten">
+</form>
+<% if @errors %>
+<%= erb :_error_messages, :layout => false %>
+<% end %>
+<% if @url %>
+<table border="1">
+  <td>Short URL</td>
+  <td>Long URL</td>
+  <td>Clicks</td>
+  <% @url.each do |url| %>
+  <tr>
+    <td><a href="/<%= url.id %>"><%= url.short %></a></td>
+    <td><%= url.long %></td>
+    <td><%= url.counter %></td>
+  </tr>
+  <% end %>
+</table>
+<% end %>
